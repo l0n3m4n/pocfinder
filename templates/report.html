@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exploit Report</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Internal CSS -->
+    <style>
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111;
+            color: #ddd;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Header styles */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-family: 'Orbitron', sans-serif; /* Cyberpunk-inspired font */
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .author-info {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Description styles */
+        .description {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .description h2 {
+            font-size: 1.8rem;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        /* Table styles */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #666;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background-color: #444;
+            color: #eee;
+        }
+
+        /* Link styles */
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #8BC34A;
+            text-decoration: underline;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .icon-link {
+            color: #4CAF50;
+            margin: 0 5px;
+            font-size: 1.5rem;
+        }
+
+        .icon-link:hover {
+            color: #8BC34A;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #000;
+            color: #ccc;
+        }
+
+        /* Pagination styles */
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            color: #888;
+        }
+
+        .pagination a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .pagination a:hover {
+            color: #8BC34A;
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .description h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PoC Report</h1>
+            <p class="author-info">Author: l0n3m4n</p>
+        </div>
+        <div class="description">
+            <h2>Description</h2>
+            <p>{{ description }}</p>
+        </div>
+        <div>
+            <h2>Entries</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>File Type</th>
+                        <th>URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ entries }}
+                </tbody>
+                <!-- Total Entries Row -->
+                <tfoot>
+                    <tr class="total-row">
+                        <td colspan="2" style="text-align: right;"><strong>Total Entries:</strong> <span id="totalEntries">Calculating...</span></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <footer>
+            Created by l0n3m4n &copy; 2024.
+            <div class="social-icons">
+                <a href="https://twitter.com/l0n3m4n" target="_blank" class="icon-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/l0n3m4n" target="_blank" class="icon-link"><i class="fab fa-facebook"></i></a>
+                <a href="https://medium.com/@l0n3m4n" target="_blank" class="icon-link"><i class="fab fa-medium"></i></a>
+                <a href="https://github.com/l0n3m4n" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
+            </div>
+        </footer>
+        <div class="pagination">
+            <a href="#">Previous</a>
+            <a href="#">Next</a>
+        </div>
+    </div>
+
+    <!-- JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Simulated asynchronous data retrieval (replace with your actual data handling)
+            setTimeout(function() {
+                // Count entries and vulnerabilities
+                var totalEntries = document.getElementsByTagName('tbody')[0].getElementsByTagName('tr').length;
+
+                // Display total entries in the Entries section
+                $('#totalEntries').text(totalEntries);
+            }, 1000); // Simulated 1 second delay, replace with actual data retrieval timing
+        });
+    </script>
+</body>
+</html>
