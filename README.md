@@ -27,10 +27,11 @@ $ sudo apt install python3.11-venv
 $ python3 -m pip install virtualenv 
 $ python3 -m venv venv 
 
-# installing pocfinder
+# cloning pocfinder
 $ git clone https://github.com/l0n3m4n/pocfinder.git
-$ cd pocfinder && pip install -r requirement.txt
-$ source venv/bin/activate
+$ cd pocfinder && source venv/bin/activate
+$ pip install -r requirement.txt
+$ chmod +x pocfinder.py && python3 pocfinder.py -h
 ```
 ## ⚙️ Usage
 ### Sample usage
