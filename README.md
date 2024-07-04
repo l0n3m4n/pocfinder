@@ -83,9 +83,6 @@ Fetching Data |█████████████████████�
 
 Data saved to CVE-2024-4577.html
 Total Entries: 108 out of 20 entries display on terminal
-
-
-Data saved to CVE-2024-4577.html
 ```
 ## Html report example
 ![report sample](/assets/report.png)
