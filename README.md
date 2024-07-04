@@ -37,7 +37,7 @@ $ chmod +x pocfinder.py && python3 pocfinder.py -h
 ## ⚙️ Usage
 ### Sample usage
 ```py
-$ python3 pocfinder.py CVE-2024-4577 --export txt --save CVE-2024-4577.html 
+$ python3 pocfinder.py CVE-2024-4577 --export html --save CVE-2024-4577.html 
 
 ██████╗  ██████╗  ██████╗███████╗██╗███╗   ██╗██████╗ ███████╗██████╗ 
 ██╔══██╗██╔═══██╗██╔════╝██╔════╝██║████╗  ██║██╔══██╗██╔════╝██╔══██╗
