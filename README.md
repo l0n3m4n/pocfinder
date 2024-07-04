@@ -90,7 +90,7 @@ Data saved to CVE-2024-4577.html
 ## Html PoC report example
 ![report sample](/assets/report.png)
 
-## TXT file exmaple
+## TXT file example
 ```bash
 Description: Exploit Observer has 108 entries in 14 file formats related to CVE-2024-4577. In PHP versions 8.1.* before 8.1.29, 8.2.* before 8.2.20, 8.3.* before 8.3.8, when using Apache and PHP-CGI on Windows, if the system is set up to use certain code pages, Windows may use "Best-Fit" behavior to replace characters in command line given to Win32 API functions. PHP CGI module may misinterpret those characters as PHP options, which may allow a malicious user to pass options to PHP binary being run, and thus reveal the source code of scripts, run arbitrary PHP code on the server, etc.
 Entries:
