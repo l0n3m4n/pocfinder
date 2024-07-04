@@ -17,7 +17,7 @@
 
  
 ## 📜 Description
-The Poc Finder and CVE Details tool is a powerful yet simple utility designed for cybersecurity professionals and researchers to streamline the process of discovering (PoC) and accessing essential details about Common Vulnerabilities and Exposures (CVEs). This tool integrates advanced search functionalities with comprehensive CVE database access.
+Poc Finder and CVE Details tool is a powerful yet a simple utility designed for pentesters and cybersecurity researchers to streamline the process of discovering (PoC) and accessing essential details about Common Vulnerabilities and Exposures (CVEs). This tool integrates advanced search functionalities with comprehensive CVE database access.
 
 ## 🛠️ Installation
 
