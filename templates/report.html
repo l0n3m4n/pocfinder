@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Exploit Report</title>
+    <title>CVE and PoC Report</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
@@ -218,18 +218,17 @@
         </div>
     </div>
 
-    <!-- JavaScript libraries -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            // Simulated asynchronous data retrieval (replace with your actual data handling)
+            // Simulated asynchronous data retrieval 
             setTimeout(function() {
                 // Count entries and vulnerabilities
                 var totalEntries = document.getElementsByTagName('tbody')[0].getElementsByTagName('tr').length;
 
                 // Display total entries in the Entries section
                 $('#totalEntries').text(totalEntries);
-            }, 1000); // Simulated 1 second delay, replace with actual data retrieval timing
+            }, 1000); // Simulated 1 second delay
         });
     </script>
 </body>
