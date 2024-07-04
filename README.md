@@ -20,7 +20,7 @@ The Poc Finder and CVE Details tool is a powerful yet simple utility designed fo
 
 ## 🛠️ Installation
 
-### Creating virtual environment
+### Installing pocfinder 
 ```bash
 # creating virtual environment
 $ sudo apt install python3.11-venv
