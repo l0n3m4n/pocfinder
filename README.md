@@ -6,7 +6,9 @@
 
 
 # PoC Finder 
-📚 Table of Contents
+[![asciicast](https://asciinema.org/a/WDpq6h49yCzUmDqgOtVpk4pEB.svg)](https://asciinema.org/a/WDpq6h49yCzUmDqgOtVpk4pEB)
+
+## 📚 Table of Contents
 - 📜 [Description](#-description)
 - 🛠️ [Installation](#-installation)
 - ⚙️ [Usage](#-usage)
