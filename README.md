@@ -27,8 +27,6 @@
 </p>
 
 
-
-
 [![asciicast](https://asciinema.org/a/666760.svg)](https://asciinema.org/a/666760)
 ## 📚 Table of Contents
 - 📜 [Description](#-description)
