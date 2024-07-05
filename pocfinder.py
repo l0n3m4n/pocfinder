@@ -1,3 +1,13 @@
+#!/usr/bin/python3
+
+############################
+# Author: l0n3m4n          #
+# Desciption: PoC Finder   #
+# Version: v1.3            #
+############################
+
+
+
 import argparse
 import requests
 import json
@@ -177,9 +187,8 @@ def main():
     parser = argparse.ArgumentParser(description='Proof of Concept Finder (PoC) and CVE details',
                                      epilog=f"{Fore.LIGHTGREEN_EX}Example usage: python3 pocfinder.py  CVE-YYYY-NNNN --export html --save CVE-2024-XXXX.html{Style.RESET_ALL}")
     print(banner)
-    parser.add_argument('CVE-YYYY-NNNN', type=str, help='CVE keyword to search for')
-    parser.add_argument('-e','--export', choices=['json', 'csv', 'txt', 'html', 'docx'], default='html',
-                        help='Export format (default: json)')
+    parser.add_argument('cve', type=str, help='CVE keyword to search for')
+    parser.add_argument('-e','--export', choices=['json', 'csv', 'txt', 'html', 'docx'], required=True, metavar='', default='html', help='Export format: json, csv, txt, html, docx (default: html)')
     parser.add_argument('-s', '--save', type=str, required=True, metavar='', help='Filename to save the exported data')
     args = parser.parse_args()
 
