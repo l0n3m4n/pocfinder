@@ -174,13 +174,13 @@ def main():
 ╚═╝      ╚═════╝  ╚═════╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝  ╚═╝
     Author: l0n3m4n | CVE Details and PoC Finder | Version: v1.2     
 {Style.RESET_ALL}"""
-    parser = argparse.ArgumentParser(description='PoC Finder and CVE details',
-                                     epilog=f"{Fore.LIGHTGREEN_EX}Example usage: python3 pocfinder.py  CVE-2024-XXXX --export html --save CVE-2024-XXXX.html{Style.RESET_ALL}")
+    parser = argparse.ArgumentParser(description='Proof of Concept Finder (PoC) and CVE details',
+                                     epilog=f"{Fore.LIGHTGREEN_EX}Example usage: python3 pocfinder.py  CVE-YYYY-NNNN --export html --save CVE-2024-XXXX.html{Style.RESET_ALL}")
     print(banner)
-    parser.add_argument('cve', type=str, help='CVE keyword to search for')
-    parser.add_argument('--export', choices=['json', 'csv', 'txt', 'html', 'docx'], default='html',
+    parser.add_argument('CVE-YYYY-NNNN', type=str,required=True, metavar='', help='CVE keyword to search for')
+    parser.add_argument('-e','--export', choices=['json', 'csv', 'txt', 'html', 'docx'], default='html',
                         help='Export format (default: json)')
-    parser.add_argument('--save', type=str, required=True, help='Filename to save the exported data')
+    parser.add_argument('-s', '--save', type=str, required=True, metavar='', help='Filename to save the exported data')
     args = parser.parse_args()
 
     print(f"{Fore.CYAN}Fetching CVE information for CVE ID: {args.cve}...{Style.RESET_ALL}\n")
@@ -198,6 +198,8 @@ def main():
             save_to_html(exploit_info, args.save)
         elif args.export == 'docx':
             save_to_docx(exploit_info, args.save)
+    else:
+        raise ValueError(f"{Fore.RED}Usupported export format '{args.export}'")
        
 
 if __name__ == "__main__":
