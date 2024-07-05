@@ -3,7 +3,10 @@
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3lybGJrZnI4aXJuYjBmOHVxZTR5azcyanlrNGtzbTY3b2xkODc5ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT9IgFLfWUZigjoem4/giphy.gif" width="28">
 </h2>
 
+<p align="center">
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=28E914&random=false&width=435&lines=PoC+Finder+is+a+specialized+tool++;design+for+discovering+(PoC)+;and+providing+detailed+information;about++common++vulnerabilities+;exposure+(CVE)+" alt="Typing SVG" /></a>
+</p>
+
 
 <p align="center">
     <a href="https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fl0n3m4n%2Fpocfinder">
