@@ -182,7 +182,7 @@ def main():
 ██╔═══╝ ██║   ██║██║     ██╔══╝  ██║██║╚██╗██║██║  ██║██╔══╝  ██╔══██╗
 ██║     ╚██████╔╝╚██████╗██║     ██║██║ ╚████║██████╔╝███████╗██║  ██║
 ╚═╝      ╚═════╝  ╚═════╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝  ╚═╝
-    Author: l0n3m4n | CVE Details and PoC Finder | Version: v1.2     
+             Author: l0n3m4n | PoC Finder | Version: v1.2     
 {Style.RESET_ALL}"""
     parser = argparse.ArgumentParser(description='Proof of Concept Finder (PoC) and CVE details',
                                      epilog=f"{Fore.LIGHTGREEN_EX}Example usage: python3 pocfinder.py  CVE-YYYY-NNNN --export html --save CVE-2024-XXXX.html{Style.RESET_ALL}")
