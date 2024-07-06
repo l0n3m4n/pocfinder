@@ -48,7 +48,7 @@ def save_to_json(exploit_info, filename):
             json.dump(exploit_info, json_file, indent=4)
         
         total_entries = sum(len(urls) for urls in exploit_info['entries'].values())
-        print(f"{Fore.GREEN}Data saved to {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{filename}{Style.RESET_ALL}\n{Fore.LIGHTGREEN_EX}Total Entries: {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{total_entries}{Style.RESET_ALL} {Fore.LIGHTGREEN_EX}out of{Style.RESET_ALL} {Fore.LIGHTBLUE_EX}20{Style.RESET_ALL} {Fore.LIGHTGREEN_EX}entries display on terminal{Style.RESET_ALL}")
+        print(f"{Fore.GREEN}Data saved to {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{filename}{Style.RESET_ALL}\n{Fore.LIGHTGREEN_EX}Total Entries: {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{total_entries}{Style.RESET_ALL}")
 
         
     except Exception as e:
@@ -67,7 +67,7 @@ def save_to_csv(exploit_info, filename):
                 for url in urls:
                     writer.writerow([file_type, url])
                     total_entries += 1  #
-        print(f"{Fore.LIGHTGREEN_EX}Data saved to {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{filename}{Style.RESET_ALL}\n{Fore.LIGHTGREEN_EX}Total Entries: {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{total_entries}{Style.RESET_ALL} {Fore.LIGHTGREEN_EX}out of{Style.RESET_ALL} {Fore.LIGHTBLUE_EX}20{Style.RESET_ALL} {Fore.LIGHTGREEN_EX}entries display on terminal{Style.RESET_ALL}")
+        print(f"{Fore.LIGHTGREEN_EX}Data saved to {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{filename}{Style.RESET_ALL}\n{Fore.LIGHTGREEN_EX}Total Entries: {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{total_entries}{Style.RESET_ALL}")
     except Exception as e:
         print(f"{Fore.RED}Error saving to {filename}: {e}{Style.RESET_ALL}")
 
@@ -85,7 +85,7 @@ def save_to_txt(exploit_info, filename):
                 for url in urls:
                     txt_file.write(f"  - {url}\n")
                     total_entries += 1 
-        print(f"{Fore.LIGHTGREEN_EX}Data saved to {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{filename}{Style.RESET_ALL}\n{Fore.LIGHTGREEN_EX}Total Entries: {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{total_entries}{Style.RESET_ALL} {Fore.LIGHTGREEN_EX}out of{Style.RESET_ALL} {Fore.LIGHTBLUE_EX}20{Style.RESET_ALL} {Fore.LIGHTGREEN_EX}entries display on terminal{Style.RESET_ALL}")
+        print(f"{Fore.LIGHTGREEN_EX}Data saved to {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{filename}{Style.RESET_ALL}\n{Fore.LIGHTGREEN_EX}Total Entries: {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{total_entries}{Style.RESET_ALL}")
     except Exception as e:
         print(f"{Fore.RED}Error saving to {filename}: {e}{Style.RESET_ALL}")
 
@@ -113,7 +113,7 @@ def save_to_html(exploit_info, filename):
           
         with open(filename, 'w', encoding='utf-8') as html_file:
             html_file.write(template)
-        print(f"{Fore.LIGHTGREEN_EX}Data saved to {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{filename}{Style.RESET_ALL}\n{Fore.LIGHTGREEN_EX}Total Entries: {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{total_entries}{Style.RESET_ALL} {Fore.LIGHTGREEN_EX}out of{Style.RESET_ALL} {Fore.LIGHTBLUE_EX}20{Style.RESET_ALL} {Fore.LIGHTGREEN_EX}entries display on terminal{Style.RESET_ALL}")
+        print(f"{Fore.LIGHTGREEN_EX}Data saved to {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{filename}{Style.RESET_ALL}\n{Fore.LIGHTGREEN_EX}Total Entries: {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{total_entries}{Style.RESET_ALL}")
     except FileNotFoundError as fnf_error:
         print(f"{Fore.RED}Error: File not found - {fnf_error}{Style.RESET_ALL}")
     except IOError as io_error:
@@ -137,7 +137,7 @@ def save_to_docx(exploit_info, filename):
                 doc.add_paragraph(url)
                 total_entries += 1
         doc.save(filename)
-        print(f"{Fore.LIGHTGREEN_EX}Data saved to {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{filename}{Style.RESET_ALL}\n{Fore.LIGHTGREEN_EX}Total Entries: {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{total_entries}{Style.RESET_ALL} {Fore.LIGHTGREEN_EX}out of{Style.RESET_ALL} {Fore.LIGHTBLUE_EX}20{Style.RESET_ALL} {Fore.LIGHTGREEN_EX}entries display in terminal{Style.RESET_ALL}")
+        print(f"{Fore.LIGHTGREEN_EX}Data saved to {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{filename}{Style.RESET_ALL}\n{Fore.LIGHTGREEN_EX}Total Entries: {Style.RESET_ALL}{Fore.LIGHTBLUE_EX}{total_entries}{Style.RESET_ALL}")
     except Exception as e:
         print(f"{Fore.RED}Error saving to {filename}: {e}{Style.RESET_ALL}")
 
