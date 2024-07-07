@@ -76,7 +76,7 @@ $ chmod +x pocfinder.py && python3 pocfinder.py -h
 - [x] **~~Adding total entries~~**
 - [x] **~~Adding default html report templates~~**
 - [x] **~~Adding html,csv,json,docx report output~~**
-- [ ] **Adding docker container for easy deployment**
+- [ ] **Adding Dockerfile for easy deployment**
 - [ ] **Extending features and custom templates**
 
  
