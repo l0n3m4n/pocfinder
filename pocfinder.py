@@ -195,20 +195,27 @@ def main():
     print(f"{Fore.CYAN}Fetching CVE information for CVE ID: {args.cve}...{Style.RESET_ALL}\n")
     exploit_info = fetch_exploit_info(args.cve)
 
-    if exploit_info:
-        display_results_table(exploit_info)
-        if args.export == 'json':
-            save_to_json(exploit_info, args.save)
-        elif args.export == 'csv':
-            save_to_csv(exploit_info, args.save)
-        elif args.export == 'txt':
-            save_to_txt(exploit_info, args.save)
-        elif args.export == 'html':
-            save_to_html(exploit_info, args.save)
-        elif args.export == 'docx':
-            save_to_docx(exploit_info, args.save)
-    else:
-        raise ValueError(f"{Fore.RED}Usupported export format '{args.export}'")
+    try:
+        if exploit_info:
+            display_results_table(exploit_info)
+            if args.export == 'json':
+                save_to_json(exploit_info, args.save)
+            elif args.export == 'csv':
+                save_to_csv(exploit_info, args.save)
+            elif args.export == 'txt':
+                save_to_txt(exploit_info, args.save)
+            elif args.export == 'html':
+                save_to_html(exploit_info, args.save)
+            elif args.export == 'docx':
+                save_to_docx(exploit_info, args.save)
+            else:
+                raise ValueError(f"{Fore.RED}Usupported export format'{args.export}'")
+        else:
+            raise ValueError("No exploit information available")
+    except ValueError as ve:
+        print(f"{Fore.RED}ValueError: {ve}{Style.RESET_ALL}")
+    except Exception as e:
+        print(f"{Fore.RED}An unxepected error occured: {e}{Style.RESET_ALL}")
        
 
 if __name__ == "__main__":
