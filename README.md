@@ -68,7 +68,7 @@ $ chmod +x pocfinder.py && python3 pocfinder.py -h
 ```
 ## ⚙️ Usage
 ![logo](/assets/pocfinder.png)
-
+  
 ## 📝 Todo
 - [x] **~~Adding total entries~~**
 - [x] **~~Adding default html report templates~~**
