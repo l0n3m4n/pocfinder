@@ -69,9 +69,6 @@ $ chmod +x pocfinder.py && python3 pocfinder.py -h
 ## ⚙️ Usage
 ![logo](/assets/pocfinder.png)
 
-## 💁 References
-- [**Exploit Observer**](https://api.exploit.observer)
-
 ## 📝 Todo
 - [x] **~~Adding total entries~~**
 - [x] **~~Adding default html report templates~~**
