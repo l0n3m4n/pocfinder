@@ -184,8 +184,16 @@ def main():
 ╚═╝      ╚═════╝  ╚═════╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝  ╚═╝
              Author: l0n3m4n | PoC Finder | Version: v1.2     
 {Style.RESET_ALL}"""
-    parser = argparse.ArgumentParser(description='Proof of Concept Finder (PoC) and CVE details',
-                                     epilog=f"{Fore.LIGHTGREEN_EX}Example usage: python3 pocfinder.py  CVE-YYYY-NNNN --export html --save CVE-2024-XXXX.html{Style.RESET_ALL}")
+    parser = argparse.ArgumentParser(
+        description='Proof of Concept Finder (PoC) and CVE details',
+        epilog=(
+            f"{Fore.LIGHTGREEN_EX}Example usage:\n\n"
+            "    python3 pocfinder.py CVE-YYYY-NNNN --export html --save CVE-2024-XXXX.html\n\n"
+            "    docker run --rm -v .:/workdir pocfinder CVE-YYYY-NNNN --export html --save CVE-2024-XXXX.html"
+            f"{Style.RESET_ALL}"
+        ),
+        formatter_class=argparse.RawTextHelpFormatter
+    )
     print(banner)
     parser.add_argument('cve', type=str, help='CVE keyword to search for')
     parser.add_argument('-e','--export', choices=['json', 'csv', 'txt', 'html', 'docx'], required=True, metavar='', default='html', help='Export format: json, csv, txt, html, docx (default: html)')

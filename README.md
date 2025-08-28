@@ -53,7 +53,7 @@ Poc Finder and CVE Details tool is a powerful yet a simple utility designed for 
 
 ## 🛠️ Installation
 
-### Installing pocfinder 
+### Installing pocfinder with Python
 ```bash
 # creating virtual environment
 $ sudo apt install python3.11-venv
@@ -66,6 +66,18 @@ $ cd pocfinder && source venv/bin/activate
 $ pip install -r requirement.txt
 $ chmod +x pocfinder.py && python3 pocfinder.py -h
 ```
+
+### Installing pocfinder with Docker
+```bash
+# cloning repo
+$ git clone https://github.com/l0n3m4n/pocfinder.git
+$ cd pocfinder
+
+# building the Docker container
+$ docker build -t pocfinder .
+$ docker run --rm pocfinder -h
+```
+
 ## ⚙️ Usage
 ![logo](/assets/pocfinder.png)
 ## 📊 Report
@@ -75,7 +87,7 @@ $ chmod +x pocfinder.py && python3 pocfinder.py -h
 - [x] **~~Adding total entries~~**
 - [x] **~~Adding default html report templates~~**
 - [x] **~~Adding html,csv,json,docx report output~~**
-- [ ] **Adding Dockerfile for easy deployment**
+- [x] **~~Adding Dockerfile for easy deployment~~**
 - [ ] **Extending features and custom templates**
 
  
