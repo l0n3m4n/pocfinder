@@ -58,11 +58,11 @@ Poc Finder and CVE Details tool is a powerful yet a simple utility designed for 
 # creating virtual environment
 $ sudo apt install python3.11-venv
 $ python3 -m pip install virtualenv 
-$ python3 -m venv venv 
+$ python3 -m venv venv-pocfinder 
 
 # cloning repo
 $ git clone https://github.com/l0n3m4n/pocfinder.git
-$ cd pocfinder && source venv/bin/activate
+$ cd pocfinder && source ../venv-pocfinder/bin/activate
 $ pip install -r requirement.txt
 $ chmod +x pocfinder.py && python3 pocfinder.py -h
 ```
